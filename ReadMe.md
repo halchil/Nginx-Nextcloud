@@ -97,3 +97,20 @@ nextcloud             latest    2706aa40a539   4 days ago      1.24GB
 
 [Nextcloud](https://github.com/halchil/Nginx-Nextcloud/blob/main/NextCloud/docker-compose.yaml)
 
+```
+[実行コマンド]
+docker compose up -d
+
+[結果]
+WARN[0000] /home/mainte/Nginx-Nextcloud/NextCloud/docker-compose.yaml: `version` is obsolete 
+[+] Running 1/1
+ ✔ Container nextcloud  Started
+ ```
+
+以下のアドレスで、アクセスしログイン画面の表示に成功。
+```
+ http://192.168.56.102:8080
+
+ ```
+
+![fig](/Img/img1.png)
