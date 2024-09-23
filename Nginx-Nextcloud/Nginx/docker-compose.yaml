@@ -5,7 +5,8 @@ services:
     image: nginx:latest
     container_name: nginx
     networks:
-      - ecosystem
+      ecosystem:
+        ipv4_address: 172.10.10.3  # 指定したIPアドレスを追加
     ports:
       - "80:80"
     volumes:
