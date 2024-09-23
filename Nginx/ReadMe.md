@@ -1,8 +1,5 @@
 # はじめに
 
-# 参考文献
-[Next Cloud Document](https://docs.nextcloud.com/)
-
 # ネットワーク作成
 
 ```
@@ -61,34 +58,3 @@ WARN[0000] /home/mainte/Nginx-Nextcloud/Nginx/docker-compose.yaml: `version` is 
  ```
 
 Nginxへのアクセスは確認できた
-
-
-# NextCloud イメージ取得
-
-```
-[実行コマンド]
-docker pull nextcloud
-
-[結果]
-Using default tag: latest
-latest: Pulling from library/nextcloud
-a2318d6c47ec: Already exists 
-c335a1cecf20: Pull complete 
-9f1356d24f26: Downloading [=====>                                             ]  11.31MB/104.3MB
-93a67f8d1dfc: Download complete 
-773d8e2be6c6: Downloading [==================>                                ]  7.633MB/20.33MB
-b874a8bbb522: Download complete 
-...
-```
-
-イメージを確認する。
-
-```
-[実行コマンド]
-docker image list
-
-[結果]
-REPOSITORY            TAG       IMAGE ID       CREATED         SIZE
-nextcloud             latest    2706aa40a539   4 days ago      1.24GB
-...
-```
