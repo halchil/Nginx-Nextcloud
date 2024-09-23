@@ -118,12 +118,12 @@ WARN[0000] /home/mainte/Nginx-Nextcloud/NextCloud/docker-compose.yaml: `version`
 
 # データ保持の仕組みを作る
 
-データ保持に関しては、以下のボリュームセクション
+データ保持に関しては、以下のボリュームセクションを有効にすることで、可能にする。
 ```
 volumes:
       - ./nextcloud-data:/var/www/html
 ```
-
+volumeを有効にした状態で、ローカル側では、
 ```
 ll nextcloud-data/
 total 1328
@@ -160,4 +160,6 @@ sudo ls -l nextcloud-data/data/test/files/Haru
 
 
 # Nginxと接続する
+ChatGPTに聞く。
+
 
