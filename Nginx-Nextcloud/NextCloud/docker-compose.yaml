@@ -4,6 +4,7 @@ services:
   nextcloud:
     image: nextcloud
     container_name: nextcloud
+    hostname: nextcloud
     restart: always
     #ports:
     #  - "8080:80"
@@ -11,6 +12,9 @@ services:
       - ./nextcloud-data:/var/www/html
     networks:
       - ecosystem
+    environment:
+      - NEXTCLOUD_ADMIN_USER=nextadmin
+      - NEXTCLOUD_ADMIN_PASSWORD=nextadmin
 
 networks:
   ecosystem:
