@@ -110,7 +110,19 @@ WARN[0000] /home/mainte/Nginx-Nextcloud/NextCloud/docker-compose.yaml: `version`
 以下のアドレスで、アクセスしログイン画面の表示に成功。
 ```
  http://192.168.56.102:8080
-
  ```
 
 ![fig](/Img/img1.png)
+
+ここでは、データが保持されないので、一度コンテナをリムーブすると、データが消えてしまう。
+
+# データ保持の仕組みを作る
+
+データ保持に関しては、以下のボリュームセクション
+```
+volumes:
+      - ./nextcloud-data:/var/www/html
+```
+
+# Nginxと接続する
+
