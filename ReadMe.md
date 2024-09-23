@@ -124,5 +124,40 @@ volumes:
       - ./nextcloud-data:/var/www/html
 ```
 
+```
+ll nextcloud-data/
+total 1328
+...
+drwxr-xr-x 53 www-data www-data    4096 Sep 23 07:13 apps/
+...
+drwxr-xr-x  3 www-data www-data    4096 Sep 23 07:13 data/
+drwxr-xr-x  2 www-data www-data   20480 Sep 23 07:13 dist/
+...
+
+```
+
+この中の、`data`ディレクトリにアップロードファイルが保管される。
+
+試しにブラウザから`Haru`という名前のフォルダを作成する。
+そしてその中に`nginx.conf`を作成する。
+
+```
+[確認コマンド]
+sudo ls -l nextcloud-data/data/test/files
+
+[結果]
+...
+drwxr-xr-x 2 www-data www-data     4096 Sep 23 07:17  Haru
+...
+
+[確認コマンド]
+sudo ls -l nextcloud-data/data/test/files/Haru
+
+[結果]
+-rw-r--r-- 1 www-data www-data 913 Sep 23 05:46 nginx.conf
+```
+となり、ローカル側でもファイルが連携されていることが分かった。
+
+
 # Nginxと接続する
 
