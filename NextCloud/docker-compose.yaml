@@ -12,6 +12,6 @@ services:
     networks:
       - ecosystem
 
-  networks:
+networks:
   ecosystem:
     external: true
