@@ -92,3 +92,8 @@ REPOSITORY            TAG       IMAGE ID       CREATED         SIZE
 nextcloud             latest    2706aa40a539   4 days ago      1.24GB
 ...
 ```
+
+# Nextcloud単体でデプロイ
+
+[Nextcloud](https://github.com/halchil/Nginx-Nextcloud/blob/main/NextCloud/docker-compose.yaml)
+
