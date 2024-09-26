@@ -9,7 +9,8 @@ services:
     #ports:
     #  - "8080:80"
     volumes:
-      - ./nextcloud-data:/var/www/html
+      # - ./nextcloud-data:/var/www/html
+      - nextcloud_data:/var/www/html
     networks:
       ecosystem:
         ipv4_address: 172.10.10.4  # 指定したIPアドレスを追加
@@ -22,3 +23,6 @@ services:
 networks:
   ecosystem:
     external: true  # 既に作成されたネットワークを使用する場合
+
+volumes:
+  nextcloud_data:
